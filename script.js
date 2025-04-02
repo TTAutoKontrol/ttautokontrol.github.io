@@ -1,9 +1,23 @@
 // Wait for the page to load
 document.addEventListener('DOMContentLoaded', function() {
     // Scroll to top on page refresh
-    window.onbeforeunload = function() {
+    window.addEventListener('beforeunload', function() {
         window.scrollTo(0, 0);
-    };
+    });
+
+    // Also scroll to top when the page loads
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+        // Force scroll to top after a short delay to ensure it works
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
+    });
+
+    // Force scroll to top when the page is about to unload
+    window.addEventListener('unload', function() {
+        window.scrollTo(0, 0);
+    });
 
     // Mobile menu toggle
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -250,9 +264,25 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.installment-options').style.display = 'block';
     });
 
+    // Loading Animation
+    const loader = document.querySelector('.loader-wrapper');
+    const progressBar = document.querySelector('.loader-progress-bar');
+    let progress = 0;
+    
+    // Simulate loading progress
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 30;
+        if (progress >= 100) {
+            progress = 100;
+            clearInterval(progressInterval);
+        }
+        progressBar.style.width = progress + '%';
+    }, 500);
+
     // Hide loader when page is fully loaded
     window.addEventListener('load', function() {
-        const loader = document.querySelector('.loader-wrapper');
+        clearInterval(progressInterval);
+        progressBar.style.width = '100%';
         
         // Add a small delay to ensure smooth transition
         setTimeout(() => {
