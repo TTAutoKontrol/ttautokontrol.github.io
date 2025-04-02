@@ -1257,4 +1257,246 @@ footer {
     .about-text ul li {
         font-size: 1em;
     }
+}
+
+/* Registration Section */
+.registration-content {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.registration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.registration-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.registration-text h3 {
+    color: #444;
+    margin: 25px 0 15px;
+    font-size: 1.5em;
+}
+
+.registration-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.registration-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.registration-text ul li {
+    color: #666;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.registration-text ul li:before {
+    content: "•";
+    color: #e74c3c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.registration-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .registration-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .registration-text h2 {
+        font-size: 2em;
+    }
+    
+    .registration-text h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* Technical Service Section */
+.technical-service-content,
+.insurance-content,
+.service-content,
+.documents-content,
+.certification-content,
+.membership-content,
+.career-content {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.technical-service-grid,
+.insurance-grid,
+.service-grid,
+.documents-grid,
+.certification-grid,
+.membership-grid,
+.career-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.technical-service-text h2,
+.insurance-text h2,
+.service-text h2,
+.documents-text h2,
+.certification-text h2,
+.membership-text h2,
+.career-text h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.technical-service-text h3,
+.insurance-text h3,
+.service-text h3,
+.documents-text h3,
+.certification-text h3,
+.membership-text h3,
+.career-text h3 {
+    color: #444;
+    margin: 25px 0 15px;
+    font-size: 1.5em;
+}
+
+.technical-service-text p,
+.insurance-text p,
+.service-text p,
+.documents-text p,
+.certification-text p,
+.membership-text p,
+.career-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.technical-service-text ul,
+.insurance-text ul,
+.service-text ul,
+.documents-text ul,
+.certification-text ul,
+.membership-text ul,
+.career-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.technical-service-text ul li,
+.insurance-text ul li,
+.service-text ul li,
+.documents-text ul li,
+.certification-text ul li,
+.membership-text ul li,
+.career-text ul li {
+    color: #666;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.technical-service-text ul li:before,
+.insurance-text ul li:before,
+.service-text ul li:before,
+.documents-text ul li:before,
+.certification-text ul li:before,
+.membership-text ul li:before,
+.career-text ul li:before {
+    content: "•";
+    color: #e74c3c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.technical-service-image img,
+.insurance-image img,
+.service-image img,
+.documents-image img,
+.certification-image img,
+.membership-image img,
+.career-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .technical-service-grid,
+    .insurance-grid,
+    .service-grid,
+    .documents-grid,
+    .certification-grid,
+    .membership-grid,
+    .career-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .technical-service-text h2,
+    .insurance-text h2,
+    .service-text h2,
+    .documents-text h2,
+    .certification-text h2,
+    .membership-text h2,
+    .career-text h2 {
+        font-size: 2em;
+    }
+    
+    .technical-service-text h3,
+    .insurance-text h3,
+    .service-text h3,
+    .documents-text h3,
+    .certification-text h3,
+    .membership-text h3,
+    .career-text h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* Section positioning */
+section[id] {
+    scroll-margin-top: 80px; /* Adjust this value based on your header height */
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure proper section positioning */
+.about-content,
+.registration-content,
+.technical-service-content,
+.insurance-content,
+.service-content,
+.documents-content,
+.certification-content,
+.membership-content,
+.career-content {
+    position: relative;
+    z-index: 1;
 } 
