@@ -89,13 +89,15 @@ body {
 }
 
 .logo {
-    flex: 0 0 auto;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .logo img {
-    height: 100px;
+    max-height: 60px;
     width: auto;
+    display: block;
     transition: var(--transition);
 }
 
@@ -175,16 +177,11 @@ body {
     }
 
     .logo {
-        margin-right: 0;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .logo img {
-        height: 60px;
-        width: auto;
+        max-height: 50px;
     }
 
     .nav-menu {
