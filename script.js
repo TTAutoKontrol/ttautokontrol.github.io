@@ -1,5 +1,10 @@
 // Wait for the page to load
 document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to top on page refresh
+    window.onbeforeunload = function() {
+        window.scrollTo(0, 0);
+    };
+
     // Mobile menu toggle
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navMenu = document.querySelector('.nav-menu');
