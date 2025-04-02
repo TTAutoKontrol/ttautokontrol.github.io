@@ -244,6 +244,21 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('calculation-result').style.display = 'block';
         document.querySelector('.installment-options').style.display = 'block';
     });
+
+    // Hide loader when page is fully loaded
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader-wrapper');
+        
+        // Add a small delay to ensure smooth transition
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            
+            // Remove loader from DOM after animation
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 1000);
+    });
 });
 
 // Helper function to format price
