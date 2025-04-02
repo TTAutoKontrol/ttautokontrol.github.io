@@ -1,33 +1,29 @@
-# System files
+# Системски фајлови
 .DS_Store
 Thumbs.db
 
-# IDE files
-.vscode/
+# IDE фајлови
 .idea/
+.vscode/
 *.sublime-project
 *.sublime-workspace
 
-# Dependencies
+# Зависности
 node_modules/
 vendor/
 
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Logs
+# Лог фајлови
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build output
-dist/
-build/
-out/
+# Локални конфигурациски фајлови
+.env
+.env.local
+.env.*.local
 
-# Cache
-.cache/
-.temp/ 
+# Привремени фајлови
+*.tmp
+*.temp
+.cache/ 
