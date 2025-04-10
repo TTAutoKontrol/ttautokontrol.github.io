@@ -14,7 +14,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.html [L]
 
 # Allow access to static files
-<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
+<FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
     Order Allow,Deny
     Allow from all
 </FilesMatch>
@@ -39,4 +39,4 @@ DirectoryIndex index.html
 <Directory "images">
     Order Allow,Deny
     Allow from all
-</Directory> a
+</Directory>
