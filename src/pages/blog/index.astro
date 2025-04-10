@@ -14,76 +14,79 @@ const filteredPosts = currentCategory === 'Сите'
 <Layout title="Блог - ТТ Ауто Контрол">
 	<main>
 		<!-- Hero Section -->
-		<section class="hero-section">
-			<div class="hero-content">
-				<h1 class="page-title">Блог</h1>
-				<p class="page-subtitle">Новости, совети и информации за технички преглед на возила</p>
+		<section class="relative py-20 bg-gradient-to-r from-red-600 to-red-800 text-white">
+			<div class="absolute inset-0 bg-black/50"></div>
+			<div class="relative max-w-6xl mx-auto px-4">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">Блог</h1>
+				<p class="text-xl text-red-100 max-w-2xl">Новости, совети и информации за технички преглед на возила</p>
 			</div>
 		</section>
 
-		<section class="section-container">
-			<!-- Category Filter -->
-			<div class="mb-12">
-				<div class="flex flex-wrap justify-center gap-4">
-					<button class="px-6 py-2 rounded-full bg-primary text-white hover:bg-primary-dark transition duration-300">
-						Сите
-					</button>
-					<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
-						Совети
-					</button>
-					<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
-						Новости
-					</button>
-					<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
-						Анализа
-					</button>
-					<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
-						Едукација
-					</button>
+		<section class="py-16">
+			<div class="max-w-6xl mx-auto px-4">
+				<!-- Category Filter -->
+				<div class="mb-12">
+					<div class="flex flex-wrap justify-center gap-4">
+						<button class="px-6 py-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition duration-300">
+							Сите
+						</button>
+						<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
+							Совети
+						</button>
+						<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
+							Новости
+						</button>
+						<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
+							Анализа
+						</button>
+						<button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition duration-300">
+							Едукација
+						</button>
+					</div>
 				</div>
-			</div>
 
-			<!-- Blog Posts Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				{filteredPosts.map((post) => (
-					<article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-						<img
-							src={post.image}
-							alt={post.title}
-							class="w-full h-48 object-cover"
-						/>
-						<div class="p-6">
-							<div class="flex items-center text-sm text-gray-500 mb-2">
-								<span>{post.date}</span>
-								<span class="mx-2">•</span>
-								<span>{post.author}</span>
+				<!-- Blog Posts Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{filteredPosts.map((post) => (
+						<article class="bg-white rounded-lg shadow-sm border border-red-100 overflow-hidden hover:shadow-md transition duration-300">
+							<img
+								src={post.image}
+								alt={post.title}
+								class="w-full h-48 object-cover"
+							/>
+							<div class="p-6">
+								<div class="flex items-center text-sm text-gray-500 mb-2">
+									<span>{post.date}</span>
+									<span class="mx-2">•</span>
+									<span>{post.author}</span>
+								</div>
+								<h2 class="text-xl font-semibold mb-3">
+									<a href={`/blog/${post.slug}`} class="text-gray-900 hover:text-red-600">
+										{post.title}
+									</a>
+								</h2>
+								<p class="text-gray-600 mb-4">{post.excerpt}</p>
+								<div class="flex justify-between items-center">
+									<span class="text-sm text-red-600 font-medium">{post.category}</span>
+									<a
+										href={`/blog/${post.slug}`}
+										class="text-red-600 hover:text-red-700 font-medium"
+									>
+										Прочитај повеќе →
+									</a>
+								</div>
 							</div>
-							<h2 class="text-xl font-semibold mb-3">
-								<a href={`/blog/${post.slug}`} class="text-gray-900 hover:text-primary">
-									{post.title}
-								</a>
-							</h2>
-							<p class="text-gray-600 mb-4">{post.excerpt}</p>
-							<div class="flex justify-between items-center">
-								<span class="text-sm text-primary font-medium">{post.category}</span>
-								<a
-									href={`/blog/${post.slug}`}
-									class="text-primary hover:text-primary-dark font-medium"
-								>
-									Прочитај повеќе →
-								</a>
-							</div>
-						</div>
-					</article>
-				))}
+						</article>
+					))}
+				</div>
 			</div>
 		</section>
 	</main>
 </Layout>
 
 <style>
-	article {
-		transition: all 0.3s ease;
+	main {
+		min-height: calc(100vh - 200px);
 	}
 </style>
 

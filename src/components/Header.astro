@@ -12,11 +12,11 @@ const navigation = [
 ---
 
 <header class="fixed w-full bg-white shadow-md z-50">
-    <nav class="container mx-auto px-6 py-3">
-        <div class="flex items-center justify-between">
+    <nav class="container mx-auto px-6">
+        <div class="flex items-center justify-between h-14">
             <div class="flex items-center">
-                <a href="/" class="flex items-center">
-                    <img src="/images/logo.png" alt="ТТ Ауто Контрол" class="h-12">
+                <a href="/" class="flex items-center -my-8">
+                    <img src="/images/logo.png" alt="ТТ Ауто Контрол" class="h-28">
                 </a>
             </div>
 
@@ -47,7 +47,7 @@ const navigation = [
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div class="mobile-menu hidden md:hidden mt-4">
+        <div class="mobile-menu hidden md:hidden mt-2 pb-2">
             {navigation.map((item) => (
                 <a
                     href={item.href}

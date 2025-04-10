@@ -17,17 +17,17 @@ import Layout from '../layouts/Layout.astro';
 		<section class="py-16">
 			<div class="max-w-6xl mx-auto px-4">
 				<!-- Mission -->
-				<div class="bg-white rounded-lg p-8 shadow-sm mb-12">
+				<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100 mb-12">
 					<h2 class="text-2xl font-bold text-gray-800 mb-4">Нашата Мисија</h2>
 					<p class="text-gray-600 text-lg">Да обезбедиме највисок квалитет на технички преглед на возила, со цел да придонесеме за безбедност во сообраќајот и заштита на животната средина.</p>
 				</div>
 
 				<div class="grid md:grid-cols-2 gap-8 mb-12">
-					<div class="card">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100">
 						<h3 class="text-xl font-bold text-gray-800 mb-4">Нашата Визија</h3>
 						<p class="text-gray-600">Да бидеме водечка институција во областа на технички преглед на возила во Македонија, препознаени по нашата професионалност, постојано подобрување и иновација во работата.</p>
 					</div>
-					<div class="card">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100">
 						<h3 class="text-xl font-bold text-gray-800 mb-4">Нашите Вредности</h3>
 						<ul class="text-gray-600 space-y-2">
 							<li>• Професионализам и експертиза</li>
@@ -42,12 +42,12 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 
 		<!-- Why Choose Us Section -->
-		<section class="py-12 bg-gray-50">
-			<div class="section-container">
+		<section class="py-16 bg-white">
+			<div class="max-w-6xl mx-auto px-4">
 				<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Зошто да нè изберете?</h2>
 				<div class="grid md:grid-cols-3 gap-8">
-					<div class="card text-center">
-						<div class="text-primary mb-4">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100 text-center">
+						<div class="text-red-600 mb-4">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 							</svg>
@@ -55,8 +55,8 @@ import Layout from '../layouts/Layout.astro';
 						<h3 class="text-xl font-bold text-gray-800 mb-2">Професионален Тим</h3>
 						<p class="text-gray-600">Нашите инженери се високо квалификувани и постојано се едуцираат за најновите стандарди.</p>
 					</div>
-					<div class="card text-center">
-						<div class="text-primary mb-4">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100 text-center">
+						<div class="text-red-600 mb-4">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
 							</svg>
@@ -64,8 +64,8 @@ import Layout from '../layouts/Layout.astro';
 						<h3 class="text-xl font-bold text-gray-800 mb-2">Брз Сервис</h3>
 						<p class="text-gray-600">Обезбедуваме брз и ефикасен сервис со минимално време на чекање.</p>
 					</div>
-					<div class="card text-center">
-						<div class="text-primary mb-4">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100 text-center">
+						<div class="text-red-600 mb-4">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 							</svg>
@@ -78,26 +78,28 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 
 		<!-- Our Services Section -->
-		<section class="section-container">
-			<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Нашите Услуги</h2>
-			<div class="grid md:grid-cols-2 gap-8">
-				<div class="card">
-					<h3 class="text-xl font-bold text-gray-800 mb-4">Технички Преглед</h3>
-					<ul class="text-gray-600 space-y-2">
-						<li>• Технички преглед на патнички возила</li>
-						<li>• Технички преглед на товарни возила</li>
-						<li>• Технички преглед на приколки</li>
-						<li>• Технички преглед на мотоцикли</li>
-					</ul>
-				</div>
-				<div class="card">
-					<h3 class="text-xl font-bold text-gray-800 mb-4">Дополнителни Услуги</h3>
-					<ul class="text-gray-600 space-y-2">
-						<li>• Консултации за одржување на возила</li>
-						<li>• Техничка документација</li>
-						<li>• Едукација за безбедност</li>
-						<li>• Подобрување на емисии</li>
-					</ul>
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-6xl mx-auto px-4">
+				<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Нашите Услуги</h2>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100">
+						<h3 class="text-xl font-bold text-gray-800 mb-4">Технички Преглед</h3>
+						<ul class="text-gray-600 space-y-2">
+							<li>• Технички преглед на патнички возила</li>
+							<li>• Технички преглед на товарни возила</li>
+							<li>• Технички преглед на приколки</li>
+							<li>• Технички преглед на мотоцикли</li>
+						</ul>
+					</div>
+					<div class="bg-white rounded-lg p-8 shadow-sm border border-red-100">
+						<h3 class="text-xl font-bold text-gray-800 mb-4">Дополнителни Услуги</h3>
+						<ul class="text-gray-600 space-y-2">
+							<li>• Консултации за одржување на возила</li>
+							<li>• Техничка документација</li>
+							<li>• Едукација за безбедност</li>
+							<li>• Подобрување на емисии</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -113,4 +115,10 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</section>
 	</main>
-</Layout> 
+</Layout>
+
+<style>
+	main {
+		min-height: calc(100vh - 200px);
+	}
+</style> 
