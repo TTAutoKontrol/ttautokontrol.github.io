@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://ttautokontrol.github.io',
-  base: '/',
+  base: '/ttautokontrol.github.io/',
   integrations: [
     tailwind(),
   ],
