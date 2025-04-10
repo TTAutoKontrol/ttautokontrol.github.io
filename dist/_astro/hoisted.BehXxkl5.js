@@ -1,0 +1,1 @@
+import"./hoisted.BX5CRztz.js";const e=document.querySelector("form");e&&e.addEventListener("submit",t=>{t.preventDefault(),alert("Ви благодариме за пораката! Ќе ве контактираме наскоро."),e.reset()});
