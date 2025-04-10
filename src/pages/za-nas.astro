@@ -5,34 +5,38 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="За нас - ТТ Ауто Контрол">
 	<main>
 		<!-- Hero Section -->
-		<section class="hero-section">
-			<div class="hero-content">
-				<h1 class="page-title">За нас</h1>
-				<p class="page-subtitle">Вашиот доверлив партнер за безбедност на возила</p>
+		<section class="relative py-20 bg-gradient-to-r from-red-600 to-red-800 text-white">
+			<div class="absolute inset-0 bg-black/50"></div>
+			<div class="relative max-w-6xl mx-auto px-4">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">За нас</h1>
+				<p class="text-xl text-red-100 max-w-2xl">Вашиот доверлив партнер за безбедност на возила</p>
 			</div>
 		</section>
 
-		<!-- Mission Section -->
-		<section class="section-container">
-			<div class="text-center mb-12">
-				<h2 class="text-3xl font-bold text-gray-800 mb-4">Нашата Мисија</h2>
-				<p class="text-xl text-gray-600">Да обезбедиме највисок квалитет на технички преглед на возила, со цел да придонесеме за безбедност на сообраќајот и заштита на животната средина.</p>
-			</div>
-
-			<div class="grid md:grid-cols-2 gap-8 mb-12">
-				<div class="card">
-					<h3 class="text-xl font-bold text-gray-800 mb-4">Нашата Визија</h3>
-					<p class="text-gray-600">Да бидеме водечка институција во областа на технички преглед на возила во Македонија, препознаени по нашата професионалност, постојано подобрување и иновација во работата.</p>
+		<!-- Main Content -->
+		<section class="py-16">
+			<div class="max-w-6xl mx-auto px-4">
+				<!-- Mission -->
+				<div class="bg-white rounded-lg p-8 shadow-sm mb-12">
+					<h2 class="text-2xl font-bold text-gray-800 mb-4">Нашата Мисија</h2>
+					<p class="text-gray-600 text-lg">Да обезбедиме највисок квалитет на технички преглед на возила, со цел да придонесеме за безбедност во сообраќајот и заштита на животната средина.</p>
 				</div>
-				<div class="card">
-					<h3 class="text-xl font-bold text-gray-800 mb-4">Нашите Вредности</h3>
-					<ul class="text-gray-600 space-y-2">
-						<li>• Професионализам и експертиза</li>
-						<li>• Интегритет и етика</li>
-						<li>• Постојано подобрување</li>
-						<li>• Одговорност кон клиентите</li>
-						<li>• Заштита на животната средина</li>
-					</ul>
+
+				<div class="grid md:grid-cols-2 gap-8 mb-12">
+					<div class="card">
+						<h3 class="text-xl font-bold text-gray-800 mb-4">Нашата Визија</h3>
+						<p class="text-gray-600">Да бидеме водечка институција во областа на технички преглед на возила во Македонија, препознаени по нашата професионалност, постојано подобрување и иновација во работата.</p>
+					</div>
+					<div class="card">
+						<h3 class="text-xl font-bold text-gray-800 mb-4">Нашите Вредности</h3>
+						<ul class="text-gray-600 space-y-2">
+							<li>• Професионализам и експертиза</li>
+							<li>• Интегритет и етика</li>
+							<li>• Постојано подобрување</li>
+							<li>• Одговорност кон клиентите</li>
+							<li>• Заштита на животната средина</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
