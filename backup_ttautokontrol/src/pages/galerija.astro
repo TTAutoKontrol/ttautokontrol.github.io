@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const images = [
+    {
+        src: '/gallery/image1.jpg',
+        alt: 'Технички преглед 1',
+        title: 'Модерна опрема'
+    },
+    {
+        src: '/gallery/image2.jpg',
+        alt: 'Технички преглед 2',
+        title: 'Професионален тим'
+    },
+    {
+        src: '/gallery/image3.jpg',
+        alt: 'Технички преглед 3',
+        title: 'Детален преглед'
+    },
+    {
+        src: '/gallery/image4.jpg',
+        alt: 'Технички преглед 4',
+        title: 'Современа технологија'
+    },
+    {
+        src: '/gallery/image5.jpg',
+        alt: 'Технички преглед 5',
+        title: 'Стручна анализа'
+    },
+    {
+        src: '/gallery/image6.jpg',
+        alt: 'Технички преглед 6',
+        title: 'Квалитетна услуга'
+    }
+];
+---
+
+<Layout title="Галерија - ТТ Ауто Контрол">
+    <div class="pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-12">Галерија</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {images.map((image) => (
+                    <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                        <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            class="w-full h-64 object-cover transform transition-transform duration-300 group-hover:scale-110"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 p-6">
+                                <h3 class="text-white text-xl font-semibold">{image.title}</h3>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <!-- Video Section -->
+            <div class="mt-20">
+                <h2 class="text-3xl font-semibold text-center mb-12">Видео презентација</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full h-[500px] rounded-lg shadow-lg"
+                            src="https://www.youtube.com/embed/your-video-id"
+                            title="ТТ Ауто Контрол - Видео презентација"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virtual Tour -->
+            <div class="mt-20">
+                <h2 class="text-3xl font-semibold text-center mb-12">Виртуелна тура</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full h-[500px] rounded-lg shadow-lg"
+                            src="https://www.google.com/maps/embed?pb=!4v1234567890!6m8!1m7!1sCAoSLEFGMVFpcE1..."
+                            title="Виртуелна тура - ТТ Ауто Контрол"
+                            frameborder="0"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .aspect-w-16 {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    }
+
+    .aspect-w-16 iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style> 

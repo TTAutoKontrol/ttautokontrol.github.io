@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ТТ Ауто Контрол - Технички преглед на возила">
+	<!-- Hero Section -->
+	<section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+		<!-- Background Image with Modern Overlay -->
+		<div class="absolute inset-0 z-0 w-full h-full">
+			<img 
+				src="/images/hero-bg.jpg" 
+				alt="ТТ Ауто Контрол позадина"
+				class="w-full h-full object-cover filter brightness-75"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-red-900/20"></div>
+			<!-- Modern Pattern Overlay -->
+			<div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#ff0000_1px,transparent_0)] bg-[size:32px_32px]"></div>
+		</div>
+
+		<!-- Content -->
+		<div class="container mx-auto px-4 relative z-10 text-center text-white py-12">
+			<h1 class="flex flex-col gap-2 mb-6">
+				<span class="text-3xl md:text-4xl font-bold text-red-500 tracking-wide">ПРОФЕСИОНАЛЕН</span>
+				<span class="text-4xl md:text-5xl font-bold leading-tight">технички преглед на возила</span>
+			</h1>
+			<p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 leading-relaxed">
+				Осигурајте ја безбедноста на вашето возило со нашите експертни услуги
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a 
+					href="/zakazhi-termin" 
+					class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 text-base shadow-lg hover:shadow-xl"
+				>
+					Закажете преглед
+				</a>
+				<a 
+					href="/kalkulator" 
+					class="bg-white/10 backdrop-blur text-white border border-white/20 px-8 py-3 rounded-full hover:bg-white/20 transition duration-300 text-base shadow-lg hover:shadow-xl"
+				>
+					Калкулатор за регистрација
+				</a>
+			</div>
+		</div>
+
+		<!-- Scroll Indicator -->
+		<div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+			<svg class="w-5 h-5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section class="py-20 bg-gray-50">
+		<div class="container mx-auto px-4">
+			<h2 class="text-4xl font-bold text-center mb-12">Зошто да нѐ изберете?</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<!-- Feature 1 -->
+				<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+					<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+						<svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-center mb-4">Брза услуга</h3>
+					<p class="text-gray-600 text-center">
+						Брз и ефикасен технички преглед со најсовремена опрема и стручен тим
+					</p>
+				</div>
+
+				<!-- Feature 2 -->
+				<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+					<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+						<svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-center mb-4">Флексибилно работно време</h3>
+					<p class="text-gray-600 text-center">
+						Работиме и во сабота за ваша погодност
+					</p>
+				</div>
+
+				<!-- Feature 3 -->
+				<div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+					<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+						<svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-center mb-4">Плаќање на рати</h3>
+					<p class="text-gray-600 text-center">
+						Можност за плаќање на рати за регистрација на возило
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-20 bg-gradient-to-br from-red-600 to-red-800 text-white">
+		<div class="container mx-auto px-4 text-center">
+			<h2 class="text-4xl font-bold mb-8">Подготвени сте за технички преглед?</h2>
+			<p class="text-xl mb-12 max-w-2xl mx-auto">
+				Контактирајте нѐ денес и закажете термин за вашето возило
+			</p>
+			<a 
+				href="/zakazhi-termin" 
+				class="bg-white text-red-600 px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 text-lg inline-block"
+			>
+				Закажи термин
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-section {
+		margin-top: -72px; /* Compensate for fixed header */
+	}
+	
+	/* Make hero section full width */
+	section:first-of-type {
+		margin-left: calc(-50vw + 50%);
+		margin-right: calc(-50vw + 50%);
+		width: 100vw;
+	}
+</style> 

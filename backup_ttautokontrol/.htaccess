@@ -1,0 +1,30 @@
+RewriteEngine On
+RewriteBase /
+
+# Ако фајлот или директориумот не постои, пренасочи го на index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
+
+# Осигурај се дека .html екстензиите работат без да се пишуваат
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Дозволи пристап до статички фајлови
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Дозволи пристап до _astro директориумот
+<Directory "_astro">
+    Order Allow,Deny
+    Allow from all
+</Directory>
+
+# Дозволи пристап до images директориумот
+<Directory "images">
+    Order Allow,Deny
+    Allow from all
+</Directory> 

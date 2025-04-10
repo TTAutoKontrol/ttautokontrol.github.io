@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Калкулатор за регистрација - ТТ Ауто Контрол">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="page-title">Калкулатор за регистрација</h1>
+                <p class="page-subtitle">Пресметајте ја цената за регистрација на вашето возило</p>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <div class="max-w-2xl mx-auto">
+                <div class="card">
+                    <form id="calculatorForm" class="space-y-6">
+                        <div>
+                            <label for="vehicleType" class="block text-gray-700 mb-2">Тип на возило</label>
+                            <select
+                                id="vehicleType"
+                                name="vehicleType"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary focus:ring-primary"
+                                required
+                            >
+                                <option value="">Изберете тип на возило</option>
+                                <option value="car">Патничко возило</option>
+                                <option value="motorcycle">Мотоцикл</option>
+                                <option value="truck">Товарно возило</option>
+                                <option value="bus">Автобус</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="engineSize" class="block text-gray-700 mb-2">Зафатнина на мотор (cm³)</label>
+                            <input
+                                type="number"
+                                id="engineSize"
+                                name="engineSize"
+                                min="0"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary focus:ring-primary"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="vehicleAge" class="block text-gray-700 mb-2">Старост на возилото (години)</label>
+                            <input
+                                type="number"
+                                id="vehicleAge"
+                                name="vehicleAge"
+                                min="0"
+                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-primary focus:ring-primary"
+                                required
+                            >
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition duration-300"
+                        >
+                            Пресметај
+                        </button>
+
+                        <div id="result" class="hidden mt-6 p-4 bg-red-50 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-2 text-center">Проценета цена:</h3>
+                            <div id="resultAmount" class="text-2xl font-bold text-primary text-center"></div>
+                            <p class="text-sm text-gray-500 mt-2 text-center">
+                                * Цената е приближна и може да варира во зависност од дополнителни фактори
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mt-12 space-y-6">
+                    <h2 class="text-2xl font-semibold text-center">Што вклучува цената?</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Технички преглед на возилото</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Еколошка такса</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Патно осигурување</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-primary mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Административни трошоци</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    const calculatorForm = document.getElementById('calculatorForm');
+    const result = document.getElementById('result');
+    const resultAmount = document.getElementById('resultAmount');
+
+    if (calculatorForm && result && resultAmount) {
+        calculatorForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const vehicleTypeElement = document.getElementById('vehicleType') as HTMLSelectElement;
+            const engineSizeElement = document.getElementById('engineSize') as HTMLInputElement;
+            const vehicleAgeElement = document.getElementById('vehicleAge') as HTMLInputElement;
+
+            if (!vehicleTypeElement || !engineSizeElement || !vehicleAgeElement) {
+                return;
+            }
+
+            const vehicleType = vehicleTypeElement.value;
+            const engineSize = parseFloat(engineSizeElement.value);
+            const vehicleAge = parseInt(vehicleAgeElement.value);
+
+            let basePrice = 0;
+            switch(vehicleType) {
+                case 'car':
+                    basePrice = 3000;
+                    break;
+                case 'motorcycle':
+                    basePrice = 1500;
+                    break;
+                case 'truck':
+                    basePrice = 5000;
+                    break;
+                case 'bus':
+                    basePrice = 6000;
+                    break;
+            }
+
+            // Add engine size factor
+            basePrice += engineSize * 0.5;
+
+            // Age reduction (max 30%)
+            const ageDiscount = Math.min(vehicleAge * 2, 30);
+            basePrice = basePrice * (1 - ageDiscount / 100);
+
+            // Show result
+            result.classList.remove('hidden');
+            resultAmount.textContent = `${Math.round(basePrice)} денари`;
+        });
+    }
+</script> 

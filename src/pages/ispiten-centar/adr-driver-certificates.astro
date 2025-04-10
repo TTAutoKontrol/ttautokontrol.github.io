@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="ADR сертификати за возачи - ТТ Ауто Контрол">
+	<Header />
+
+	<main>
+		<!-- Hero Section -->
+		<section class="relative py-12 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+			<div class="max-w-4xl mx-auto px-4">
+				<h1 class="text-3xl md:text-4xl font-bold mb-3">ADR сертификати за возачи</h1>
+				<p class="text-lg text-blue-100">Сертификација за возачи на опасен товар</p>
+			</div>
+		</section>
+
+		<!-- Content Section -->
+		<section class="py-12">
+			<div class="max-w-4xl mx-auto px-4">
+				<div class="prose prose-lg max-w-none">
+					<h2 class="text-2xl font-bold mb-6 text-gray-800">За ADR сертификатите</h2>
+					<p>
+						ADR сертификатот е задолжителен документ за возачите кои превезуваат опасен товар. Овој сертификат се издава по успешно полагање на испит и важи 5 години.
+					</p>
+
+					<h2 class="text-2xl font-bold mb-6 text-gray-800 mt-8">Процес на сертификација</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white rounded-lg p-6 shadow-sm">
+							<h3 class="text-xl font-bold mb-4 text-gray-800">1. Обука</h3>
+							<p class="text-gray-700">
+								Задолжителна обука која вклучува теориска и практична настава за транспорт на опасен товар.
+							</p>
+						</div>
+						<div class="bg-white rounded-lg p-6 shadow-sm">
+							<h3 class="text-xl font-bold mb-4 text-gray-800">2. Испит</h3>
+							<p class="text-gray-700">
+								Полагање на теоретски и практичен испит пред комисија.
+							</p>
+						</div>
+						<div class="bg-white rounded-lg p-6 shadow-sm">
+							<h3 class="text-xl font-bold mb-4 text-gray-800">3. Документација</h3>
+							<p class="text-gray-700">
+								Подготовка на потребната документација за издавање на сертификатот.
+							</p>
+						</div>
+						<div class="bg-white rounded-lg p-6 shadow-sm">
+							<h3 class="text-xl font-bold mb-4 text-gray-800">4. Сертификат</h3>
+							<p class="text-gray-700">
+								Издавање на ADR сертификат со валидност од 5 години.
+							</p>
+						</div>
+					</div>
+
+					<h2 class="text-2xl font-bold mb-6 text-gray-800">Потребна документација</h2>
+					<ul class="list-disc pl-6 mb-8">
+						<li>Лична карта или пасош</li>
+						<li>Возачка дозвола</li>
+						<li>Медицинско удостоверение</li>
+						<li>Слика (3x4)</li>
+						<li>Потврда за платено такса</li>
+					</ul>
+
+					<h2 class="text-2xl font-bold mb-6 text-gray-800">Важни информации</h2>
+					<div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8">
+						<p class="text-blue-700">
+							ADR сертификатот мора да се обновува на секои 5 години. За обновување е потребно да се положи само теоретскиот дел од испитот.
+						</p>
+					</div>
+
+					<div class="mt-8">
+						<a href="/training/exam-schedule" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+							Види термини за испити
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout> 
