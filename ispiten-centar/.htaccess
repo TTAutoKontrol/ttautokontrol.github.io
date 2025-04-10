@@ -1,0 +1,17 @@
+# Enable rewrite engine
+RewriteEngine On
+RewriteBase /
+
+# Handle front controller pattern
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
+
+# Allow access to all files
+<Files *>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Set default index file
+DirectoryIndex index.html
