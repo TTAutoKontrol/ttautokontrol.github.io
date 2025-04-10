@@ -29,8 +29,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-        env:
-          BASE_URL: '/ttautokontrol.github.io/'
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
